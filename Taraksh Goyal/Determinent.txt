@@ -1,1 +1,0 @@
-In this program I used basic determinanat formula to calculate the determinant of the 3X3 matrix entered by you.
