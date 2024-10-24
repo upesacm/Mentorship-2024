@@ -1,2 +1,0 @@
-this program will take a sentance by you and will give you the first letter of each word entered by you 
-it will find the space and will give you the letter next to it since it will be the 1st word
