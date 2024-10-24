@@ -1,2 +1,0 @@
-This program will take input from you and it will check if it is a plaindrom or not
-first it will check the length of string entered by you and then it will proceed further to check if it is palindrom or not
