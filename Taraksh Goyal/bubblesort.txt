@@ -1,2 +1,0 @@
-In this program i used bubble sort technique to sort the array entered by you 
-bubble sort is a technique which check if the two adjacent numbers are in increasing order or not this method goes on in whole array until it is fully sorted
