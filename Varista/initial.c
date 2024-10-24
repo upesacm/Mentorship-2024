@@ -5,9 +5,8 @@
 int main() 
 { 
 	char str[] = "UPES ACM WOMEN"; 
-	int i, j = 0; 
-
-	// Traversing the Character array 
+	int i, j = 0;
+	
 	for (i = 0; i < strlen(str); i++) { 
  
 		if (i == 0 && str[i] != ' ') { 
