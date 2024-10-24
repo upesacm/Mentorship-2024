@@ -1,0 +1,2 @@
+this program will ask you to enter a number and it will provide you with the factorial of the number entered by you using recursion technique
+recursion is basically a function calling it self this make many complicated tasks easy
