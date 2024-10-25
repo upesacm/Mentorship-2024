@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+    printf("Enter sentence:\n");
+    int m = 100;
+    char a[m];
+    char j[m];
+    char o[2] = {0};
+
+    // fgets(a, m, stdin);
+    scanf("%s",&a);
+    printf("String is: %s\n", a);
+
+    int p = strlen(a);
+    
+    for (int i = p - 1; i >= 0; i--)
+    {
+        o[0] = a[i];
+        strncat(j, o, 1);
+    }
+    printf("New string is: %s\n", j);
+    // j[p]='\0';
+    // printf("%d", strcmp(j, strtok(a, "\n")));
+
+    if (strcmp(j, a) == 0)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+}
