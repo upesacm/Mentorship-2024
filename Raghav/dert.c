@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 void main()
 {
     int a[3][3],b[2][2],d[3],f,y=0,z;
@@ -11,11 +10,9 @@ void main()
         scanf("%d",&  a[i][j]);
         }
     }
-    
     for(int k=0;k<3;k++)
     {
         y=0;
-        //here
         for(int i=0;i<3;i++)
         {
             z=0;
