@@ -1,0 +1,115 @@
+ASSIGNMENT 1st
+
+Question 1 Calculate the Determinent of 3x3 matrix.
+#include <stdio.h>
+
+int main() {
+    int i,j,determinant, matrix[3][3];
+   
+    printf("Enter the elements of the 3x3 matrix:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Element [%d][%d]: ", i + 1, j + 1);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    printf("\nThe 3x3 matrix is:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    determinant = matrix[0][0] * (matrix[1][1] * matrix[2][2] - matrix[1][2] * matrix[2][1])
+                - matrix[0][1] * (matrix[1][0] * matrix[2][2] - matrix[1][2] * matrix[2][0])
+                + matrix[0][2] * (matrix[1][0] * matrix[2][1] - matrix[1][1] * matrix[2][0]);
+
+    printf("\nThe determinant of the matrix is %d ", determinant);
+return 0;
+}
+
+
+Question 2  Bubble Sorting
+
+
+Question 3 Print the initial letters of the string.
+
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    if (str[0] != ' ') {
+        printf("%c", str[0]);
+    }
+
+    while (str[i] != '\0') {
+        if (str[i] == ' ' && str[i + 1] != ' ' && str[i + 1] != '\0') {
+            printf("%c", str[i + 1]);
+        }
+        i++;
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+
+Question 4 Check String is palandrome or not.
+
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i, length = 0, isPalindrome = 1;
+
+    printf("Enter a string: ");
+    gets(str);  
+
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    for (i = 0; i < length / 2; i++) {
+        if (str[i] != str[length - i - 1]) {
+            isPalindrome = 0;
+            break;
+        }
+    }
+
+    if (isPalindrome) {
+        printf("The string is a palindrome.\n");
+    } else {
+        printf("The string is not a palindrome.\n");
+    }
+
+    return 0;
+}
+
+Question 5 Factorial By Recursion.
+
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1; 
+    }
+    return n * factorial(n - 1); 
+}
+int main() {
+    int num;
+  
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    printf("Factorial of %d is: %d\n", num, factorial(num));
+
+    return 0;
+}

@@ -1,0 +1,51 @@
+#include <stdio.h>
+#define a 10
+// int determinant(int,int);
+int main() {
+    int n;
+    int f[a][a];
+
+    printf("Enter the size of the mattrix(n x n): ");
+    scanf("%d", &n);
+
+    printf("Enter the elements of the matrix:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &f[i][j]);
+        }
+    }
+
+    int det = determinant(f, n);
+    printf("The determinant of the f is: %d\n", det);
+
+    return 0;
+}
+int determinant(int f[a][a], int n) {
+    int d = 0;
+
+    
+    if (n == 1) {
+        return f[0][0];
+    }
+    
+    if (n == 2) {
+        return f[0][0] * f[1][1] - f[0][1] * f[1][0];
+    }
+
+    int submatrix[a][a];
+    for (int x = 0; x < n; x++){
+        int subi = 0; 
+        for (int i = 1; i < n; i++) {
+            int subj = 0; 
+            for (int j = 0; j < n; j++) {
+                if (j == x) continue; 
+                submatrix[subi][subj] = f[i][j];
+                subj++;
+            }
+            subi++;
+        }
+        
+        d += (x % 2 == 0 ? 1 : -1) * f[0][x] * determinant(submatrix, n - 1);
+    }
+    return d;
+}
