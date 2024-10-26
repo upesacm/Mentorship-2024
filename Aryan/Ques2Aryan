@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    
+    printf("Enter sentence\n");
+    int m = 100;
+    char a[m];
+    fgets(a, m, stdin);
+    printf("String is: %s\n", a);
+    int p = strlen(a);
+    char newst[20] = "";
+    char aaa[2];//counter to check ssspace
+    char aaaa[2];//counter to store letter after space
+    int count = 0;
+    int c = 0;
+    for (int i = 0; a[i] != '\0'; ++i)
+    {
+        if (a[i] != ' ')
+        {
+
+            count++;
+        }
+    }
+    int u = p - count;
+    printf("No of spaces %d\n", u);
+
+    for (int i = 0; i < p; i++)
+    {
+        if (i == 0)//for 1st letter
+        {
+            newst[c++] = a[0];
+            continue;
+        }
+
+        aaa[0] = a[i];
+        aaaa[0] = a[i + 1];//for getting letterr after space
+
+        if (aaa[0] == ' ')
+        {
+            newst[c++] = aaaa[0];
+        }
+    }
+    printf("%s", newst);
+}
